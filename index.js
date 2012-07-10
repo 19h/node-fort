@@ -16,13 +16,13 @@ exports.max = function (xs, f) {
     return xs[ix];
 };
 
-exports.ascend = comparator(function (a, b) {
+exports.ascend = exports.rise = comparator(function (a, b) {
     if (a.x < b.x) return -1;
     if (a.x > b.x) return 1;
     return 0;
 });
 
-exports.descend = comparator(function (a, b) {
+exports.descend = exports.fall = comparator(function (a, b) {
     if (a.x < b.x) return 1;
     if (a.x > b.x) return -1;
     return 0;
