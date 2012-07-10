@@ -4,6 +4,8 @@ Sort, min, and max by a transform function.
 
 [![build status](https://secure.travis-ci.org/substack/node-fort.png)](http://travis-ci.org/substack/node-fort)
 
+![cannon](http://substack.net/images/cannon.png)
+
 # example
 
 ## minimum of some rows
