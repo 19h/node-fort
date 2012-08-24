@@ -2,7 +2,7 @@ var test = require('tap').test;
 var fort = require('../');
 
 test('ascend', function (t) {
-    t.same([4,1,3,2].sort(fort.ascend), [1,2,3,4], 'identity');
+    t.same([4,1,3,2].sort(fort.ascend()), [1,2,3,4], 'identity');
     t.same(
         [4,1,3,2].sort(fort.ascend(function (x) { return x % 4 })),
         [4,1,2,3],
@@ -19,7 +19,7 @@ test('ascend', function (t) {
 });
 
 test('descend', function (t) {
-    t.same([4,1,3,2].sort(fort.descend), [4,3,2,1], 'identity');
+    t.same([4,1,3,2].sort(fort.descend()), [4,3,2,1], 'identity');
     t.same(
         [4,1,3,2].sort(fort.descend(function (x) { return x % 4 })),
         [3,2,1,4],
