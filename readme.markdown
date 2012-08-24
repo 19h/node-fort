@@ -82,6 +82,9 @@ Return the elements from `xs` sorted into ascending order after transforming by
 The return array will be comprised of the original elements from `xs`, not the
 transformed values from `f(x)`.
 
+If `xs` is a function or undefined, return a comparison function using
+`xs` or the identity as the function transform.
+
 ## fort.descend(xs, f)
 
 Return the elements from `xs` sorted into descending order after transforming by
@@ -89,6 +92,9 @@ Return the elements from `xs` sorted into descending order after transforming by
 
 The return array will be comprised of the original elements from `xs`, not the
 transformed values from `f(x)`.
+
+If `xs` is a function or undefined, return a comparison function using
+`xs` or the identity as the function transform.
 
 ## fort.rise(xs, f)
 
