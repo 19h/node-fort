@@ -30,6 +30,13 @@ exports.descend = exports.fall = comparator(function (a, b) {
 
 function comparator (cmp) {
     return function (xs, f) {
+        if (typeof xs === 'function' || xs === undefined) {
+            f = xs || identity;
+            return function (a, b) {
+                return cmp({ x : f(a) }, { x : f(b) });
+            }
+        }
+        
         if (!f) f = identity;
         var mapped = xs.map(function (x, i) {
             return { i : i, x : f(x) };
